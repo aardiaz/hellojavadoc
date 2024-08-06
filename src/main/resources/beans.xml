@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+      <bean class="com.di.Book"  id="bok" >
+      
+        <constructor-arg value="212"/>
+        <constructor-arg value="English"/>
+        <constructor-arg value="9000"/>
+        <constructor-arg value="John"/>
+      </bean>
+
+   <bean class="com.di.Bike"  id="bk" >
+      <property name="color" value="REd"/>
+      <property name="company" value="HOnda"/>
+      <property name="price" value="8000000"/>
+   </bean>
+   
+   
+     <bean class="com.di.Customer" id="cust">
+         <property name="id" value="34343"/>
+         <property name="name" value="Raju KC"/>
+         <property name="age" value="50"/>
+         <property name="bike" ref="bk"/>
+     </bean> 
+
+
+</beans>
